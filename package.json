@@ -4,7 +4,7 @@
   "description": "project-from-academy",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass -w scss/style.scss  -o css/style.css --recursive"
+    "compile:sass": "node-sass -w scss/style.scss  -o css/ --recursive"
   },
   "author": "Ali Akbar",
   "license": "ISC",
