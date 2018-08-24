@@ -1,0 +1,15 @@
+.btn{
+    display: block;
+    line-height: $headerHeight;
+    font-weight: 600;
+    transition: all 0.2s linear;
+}
+.btn-tcolor:hover{
+    color: $fColor;
+}
+.btn-blue{
+    background-color: $blueBtn;
+}
+.btn-blue:hover{
+    background-color: darken($blueBtn, 20%);
+}

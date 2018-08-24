@@ -355,3 +355,112 @@ table {
 td,
 th {
   padding: 0; }
+
+body {
+  width: 100%;
+  margin: auto;
+  font-family: "apercu", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #202121;
+  background: #f4f7f6;
+  overflow-x: hidden;
+  box-sizing: border-box; }
+
+a:link {
+  color: inherit;
+  text-decoration: none; }
+
+.header {
+  border-top: 1px solid rgba(101, 108, 122, 0.7);
+  border-bottom: 1px solid rgba(101, 108, 122, 0.7);
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  position: fixed;
+  background-color: #f4f7f6;
+  width: 100%;
+  top: 0;
+  z-index: 999; }
+  .header > div {
+    max-height: 5rem; }
+  .header_menu {
+    padding-top: 20px;
+    flex-grow: 1;
+    border-right: 1px solid #656c7a;
+    cursor: pointer;
+    text-transform: uppercase; }
+    .header_menu:hover .row::after {
+      transform: translateX(0); }
+  .header_title {
+    text-transform: uppercase;
+    padding-top: 10px;
+    flex-grow: 9; }
+    .header_title h2 {
+      transition: all 0.4s linear; }
+    .header_title:hover h2 {
+      letter-spacing: 5px;
+      opacity: 0; }
+  .header_btns {
+    text-transform: uppercase;
+    flex-grow: 2;
+    display: flex;
+    align-content: stretch; }
+    .header_btns a {
+      flex: 1;
+      text-align: center; }
+
+.rows {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .rows .row:nth-of-type(1)::after {
+    transition: 0.3s linear all; }
+  .rows .row:nth-of-type(2)::after {
+    transition: 0.3s 0.1s linear all; }
+  .rows .row:nth-of-type(3)::after {
+    transition: 0.3s 0.2s linear all; }
+
+.row {
+  width: 20px;
+  height: 3px;
+  background: black;
+  position: relative;
+  overflow: hidden; }
+
+.row::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background: #656c7a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  background-color: #656c7a; }
+
+.rowWrapper {
+  display: inline-block; }
+
+.menuTitle {
+  display: inline-block;
+  transform: translate(5px, 11px); }
+
+.btn {
+  display: block;
+  line-height: 5rem;
+  font-weight: 600;
+  transition: all 0.2s linear; }
+
+.btn-tcolor:hover {
+  color: #656c7a; }
+
+.btn-blue {
+  background-color: #49c5b6; }
+
+.btn-blue:hover {
+  background-color: #297f75; }
