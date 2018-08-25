@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/progresscircle.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -40,14 +41,85 @@
             </div>
         </header>
 
-
-        <div class="hero">
-
+        <div class="down">
+            <div class="hero">
+                <div class="hero_first">
+                    <div class="date">
+                        <strong>Site of The Day</strong>
+                        <span class="date">August 19, 2018</span>
+                    </div>
+                    <div class="option">
+                        <ul class="picsInfo">
+                            <li>
+                                <img src="Imgs/S1.jpg" alt="">
+                                <div class="infoOfPic">
+                                    <img src="Imgs/spinner.gif" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Imgs/S2.png" alt="">
+                                <div class="infoOfPic">
+                                    <img src="Imgs/spinner.gif" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Imgs/S3.jpg" alt="">
+                                <div class="infoOfPic">
+                                    <img src="Imgs/spinner.gif" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Imgs/s4.jpg" alt="">
+                                <div class="infoOfPic">
+                                    <img src="Imgs/spinner.gif" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <a class="btn btn-rounded" href="#">-b1</a>
+                        <a class="btn btn-rounded" href="#">Collect</a>
+                    </div>
+                </div>
+                <div class="hero_second">
+                    <h1 class="hero_second_mainHeading">A A</h1>
+                    <p class="hero_second_subHeading">Created By
+                        <span class="author">Ali Akbar</span>, dedicated to Real-State-Agency.</p>
+                    <div class="circleStatic">
+                        <div class="circleWrapper design">
+                            <div class="circle design_circle" data-percentage="75"></div>
+                            <div class="numberShowCase"></div>
+                            <h2 class="circle_heading">Design</h2>
+                        </div>
+                        <div class="circleWrapper usablity">
+                            <div class="circle usablity_circle" data-percentage="71"></div>
+                            <div class="numberShowCase"></div>
+                            <h2 class="circle_heading">Usablity</h2>
+                        </div>
+                        <div class="circleWrapper creativity">
+                            <div class="circle creativity_circle" data-percentage="69"></div>
+                            <div class="numberShowCase"></div>
+                            <h2 class="circle_heading">Creativity</h2>
+                        </div>
+                        <div class="circleWrapper content">
+                            <div class="circle content_circle" data-percentage="73"></div>
+                            <div class="numberShowCase"></div>
+                            <h2 class="circle_heading">Content</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
 
     </footer>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/progresscircle.js"></script>
+    <script>
+        $(".circle").circlechart().delay(50).circlechartNumberAnimation();
+
+    </script>
 </body>
 
 </html>

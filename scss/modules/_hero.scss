@@ -1,0 +1,155 @@
+.down{
+    position: relative;
+    top: 5.1rem;
+    height: 550px;
+    background: url("../Imgs/hero.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #f4f7f6;
+    transition: all 0.1s linear;
+    &:hover{
+        filter: grayscale(30%);
+    }
+}
+.hero{
+    height: 100%;
+    padding-left: 70px;
+    padding-right: 70px; 
+    display: flex;
+    flex-direction: column;
+    &_first{
+        display: flex;
+        .date{
+            color: $dBgcolor;
+            flex: 4;
+            padding-top: 20px;
+            font-size: 1.5rem;
+        }
+        .option{
+            flex: 3 ;
+            display: flex;
+            .btn{
+                text-align: center;
+                border: 1px solid white;
+                flex: 1;
+                height: 50px;
+                line-height: 50px;
+                align-self: center;
+                color: white;
+                margin-right: 5px; 
+            }
+            .btn:hover{
+                color: $blueBtn;
+                border-color: $blueBtn;
+            }
+        }
+
+        .picsInfo{
+            flex: 3 ;
+            list-style: none;
+            li{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                position: relative;
+                > img{
+                    border-radius: 100%;
+                    cursor: pointer;
+                }
+                .infoOfPic{
+                    width: 190px;
+                    height: 239px;
+                    position: absolute;
+                    background:white;
+                    left: -70px;
+                    top: 150%;
+                    opacity: 0;
+                    transition: opacity 0.6s linear;
+                }
+                .infoOfPic::before{
+                    content: "";
+                    background:white;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    left: 50%;
+                    top: -15px;
+                    transform: translateX(-50%) rotateZ(45deg);
+                }
+                & img:hover ~ .infoOfPic{
+                    opacity: 1;
+                }
+                img:hover{
+                    opacity: 0.6;
+                }
+                * img{
+                    background: white;
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                }
+            }
+        }
+    }
+    &_second{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &_mainHeading{
+            font-size: 3rem;
+            font-stretch: extra-expanded;
+            font-weight: 900;
+        }
+        &_subHeading{
+            font-size: 1.3rem;
+            .author{
+                color: lighten($fColor2, 10%);
+                font-size: 1.5rem;
+                font-weight: 600;
+                cursor: copy;
+                &:hover{
+                    color: inherit;
+                }
+            }
+        }
+        .circleStatic{
+            display: flex;
+            justify-content: center;
+            .circleWrapper{
+                padding: 10px;
+                .design_circle .success-stroke{
+                    stroke: lighten(red, 20%);
+                }
+                .usablity_circle .success-stroke{
+                    stroke: lighten(yellow, 20%);
+                }
+                .creativity_circle .success-stroke{
+                    stroke: lighten($fColor2, 10%);
+                }
+                .content_circle .success-stroke{
+                    stroke: darken($fColor2, 10%);
+                }
+            }
+            .circle_heading{
+                font-weight: 300;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: -20px;
+            }
+            .numberShowCase{
+                transform: translateY(-50px);
+                &::first-letter{
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
