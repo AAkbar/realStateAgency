@@ -1,8 +1,13 @@
 .btn{
-    display: block;
+    display: inline-block;
     line-height: $headerHeight;
     font-weight: 600;
     transition: all 0.5s linear;
+    text-align: center;
+}
+.btn-normal{
+    line-height: normal;
+    padding: 10px 20px;
 }
 .btn-rounded{
     border-radius: 50px;
@@ -11,8 +16,23 @@
     color: $fColor;
 }
 .btn-blue{
+    color: $dBgcolor;
     background-color: $blueBtn;
+    transition-duration: 0.1s;
 }
 .btn-blue:hover{
     background-color: darken($blueBtn, 20%);
+}
+.btn-allblue:hover{
+    color: $blueBtn;
+    border-color: $blueBtn;
+}
+.btn-circle{
+    font-size: 1.5rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: none;
+    border-color: $blueBtn;
+    border: 1px solid currentColor;
 }

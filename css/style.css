@@ -367,7 +367,7 @@ body {
   overflow-x: hidden;
   box-sizing: border-box; }
 
-a:link {
+a {
   color: inherit;
   text-decoration: none; }
 
@@ -457,21 +457,22 @@ img {
 .down {
   position: relative;
   top: 5.1rem;
-  height: 550px;
+  height: 520px;
   background: url("../Imgs/hero.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   color: #f4f7f6;
   transition: all 0.1s linear; }
-  .down:hover {
-    filter: grayscale(30%); }
 
 .hero {
+  transition: 0.2s all linear;
   height: 100%;
   padding-left: 70px;
   padding-right: 70px;
   display: flex;
   flex-direction: column; }
+  .hero:hover {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(128, 128, 128, 0.2)); }
   .hero_first {
     display: flex; }
     .hero_first .date {
@@ -486,7 +487,7 @@ img {
         text-align: center;
         border: 1px solid white;
         flex: 1;
-        height: 50px;
+        height: 40px;
         line-height: 50px;
         align-self: center;
         color: white;
@@ -499,8 +500,8 @@ img {
       list-style: none; }
       .hero_first .picsInfo li {
         display: inline-block;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         position: relative; }
         .hero_first .picsInfo li > img {
           border-radius: 100%;
@@ -530,8 +531,8 @@ img {
           opacity: 0.6; }
         .hero_first .picsInfo li * img {
           background: white;
-          width: 24px;
-          height: 24px;
+          width: 15px;
+          height: 15px;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -577,12 +578,38 @@ img {
         .hero_second .circleStatic .numberShowCase::first-letter {
           font-size: 1.5rem;
           font-weight: 900; }
+  .hero_bottom {
+    width: 30%;
+    float: left;
+    bottom: 60px;
+    height: 20px;
+    padding: 30px 20px; }
+    .hero_bottom .btn {
+      display: inline;
+      height: 40px;
+      margin-left: 10px; }
+      .hero_bottom .btn-circle {
+        line-height: 1rem;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        padding: 20px; }
+    .hero_bottom:nth-of-type(2) {
+      float: right;
+      display: flex;
+      align-items: center;
+      justify-content: right; }
 
 .btn {
-  display: block;
+  display: inline-block;
   line-height: 5rem;
   font-weight: 600;
-  transition: all 0.5s linear; }
+  transition: all 0.5s linear;
+  text-align: center; }
+
+.btn-normal {
+  line-height: normal;
+  padding: 10px 20px; }
 
 .btn-rounded {
   border-radius: 50px; }
@@ -591,7 +618,22 @@ img {
   color: #656c7a; }
 
 .btn-blue {
-  background-color: #49c5b6; }
+  color: #f4f7f6;
+  background-color: #49c5b6;
+  transition-duration: 0.1s; }
 
 .btn-blue:hover {
   background-color: #297f75; }
+
+.btn-allblue:hover {
+  color: #49c5b6;
+  border-color: #49c5b6; }
+
+.btn-circle {
+  font-size: 1.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: none;
+  border-color: #49c5b6;
+  border: 1px solid currentColor; }
