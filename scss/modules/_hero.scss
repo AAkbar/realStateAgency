@@ -1,7 +1,7 @@
 .down{
     position: relative;
     top: 5.1rem;
-    height: 520px;
+    height: 540px;
     background: url("../Imgs/hero.jpg") no-repeat;
     background-size: cover;
     background-position: center;
@@ -175,10 +175,7 @@
             float: right;
             display: flex;
             align-items: center;
-            justify-content: right;
-            .btn{
-                
-            }
+            justify-content: flex-end;
         }
     }
     
