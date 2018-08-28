@@ -122,60 +122,62 @@
         </div>
 
         <main class="main">
-            <nav class="main__nav">
-                <h4 class="main__nav-heading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta aliquam tenetur eveniet praesentium distinctio
-                    voluptates odio error aperiam.</h4>
-                <ul class="main__btn-lists">
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Design Agencies</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Promotional</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Animation</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Clean</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Flat Design</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Graphic design</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">portfolio</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Typography</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Wordpress</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">jQuery</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">GSAP Animation</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">PHP</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Naginx</a>
-                    </li>
-                    <li class="main__list">
-                        <a href="#" class="btn btn-rounded btn-allblue">Handlebars</a>
-                    </li>
-                    <li class="main__list btn-circleWrapper">
-                        <a href="#" class="btn btn-equal-padding btn-circle btn-allblue"></a>
-                    </li>
-                    <li class="main__list btn-circleWrapper">
-                        <a href="#" class="btn btn-equal-padding btn-circle btn-back-yellow"></a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="main__navWrapper">
+                <nav class="main__nav">
+                    <h4 class="main__nav-heading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta aliquam tenetur eveniet praesentium
+                        distinctio voluptates odio error aperiam.</h4>
+                    <ul class="main__btn-lists">
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Design Agencies</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Promotional</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Animation</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Clean</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Flat Design</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Graphic design</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">portfolio</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Typography</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Wordpress</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">jQuery</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">GSAP Animation</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">PHP</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Naginx</a>
+                        </li>
+                        <li class="main__list">
+                            <a href="#" class="btn btn-rounded btn-allblue">Handlebars</a>
+                        </li>
+                        <li class="main__list btn-circleWrapper">
+                            <a href="#" class="btn btn-equal-padding btn-circle btn-allblue"></a>
+                        </li>
+                        <li class="main__list btn-circleWrapper">
+                            <a href="#" class="btn btn-equal-padding btn-circle btn-back-yellow"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <section class="main__image-container">
                 <ul class="main__scroll-nav"></ul>
                 div.Images
@@ -192,6 +194,18 @@
     <script>
         $(".circle").circlechart().delay(50).circlechartNumberAnimation();
 
+        //header
+        var lastScrollPoint = 0;
+        $(window).scroll(function (e) {
+            v = $(window).scrollTop();
+            if (v > lastScrollPoint) {
+                $(".header_title h2").addClass("animateHead");
+            }
+            else if (v < lastScrollPoint) {
+                $(".header_title h2").removeClass("animateHead");
+            }
+            lastScrollPoint = v;
+        })
     </script>
 </body>
 
