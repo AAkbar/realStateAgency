@@ -378,8 +378,7 @@ img {
   height: 100%; }
 
 .header {
-  border-top: 1px solid rgba(101, 108, 122, 0.7);
-  border-bottom: 1px solid rgba(101, 108, 122, 0.7);
+  border-bottom: 1px solid #E6EAEA;
   height: 5rem;
   display: flex;
   flex-direction: row;
@@ -397,7 +396,8 @@ img {
   .header_menu {
     padding-top: 20px;
     flex-grow: 1;
-    border-right: 1px solid #656c7a;
+    max-width: 120px;
+    border-right: 1px solid #E6EAEA;
     cursor: pointer;
     text-transform: uppercase; }
     .header_menu:hover .row::after {
@@ -408,10 +408,12 @@ img {
     flex-grow: 9; }
     .header_title h2 {
       transition: all 0.4s linear; }
-    .header_title:hover h2 {
+    .header_title .animateHead {
       letter-spacing: 5px;
       opacity: 0; }
   .header_btns {
+    max-width: 326px;
+    min-width: 326px;
     text-transform: uppercase;
     flex-grow: 2;
     display: flex;
@@ -430,9 +432,9 @@ img {
   .rows .row:nth-of-type(1)::after {
     transition: 0.3s linear all; }
   .rows .row:nth-of-type(2)::after {
-    transition: 0.3s 0.1s linear all; }
+    transition: 0.3s 0.15s linear all; }
   .rows .row:nth-of-type(3)::after {
-    transition: 0.3s 0.2s linear all; }
+    transition: 0.3s 0.25s linear all; }
 
 .row {
   width: 20px;
@@ -445,12 +447,11 @@ img {
   content: "";
   width: 20px;
   height: 3px;
-  background: #656c7a;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateX(100%);
-  background-color: #656c7a; }
+  background-color: #17dfc7; }
 
 .rowWrapper {
   display: inline-block; }
@@ -553,7 +554,7 @@ img {
     .hero_second_subHeading {
       font-size: 1.3rem; }
       .hero_second_subHeading .author {
-        color: #70d1c6;
+        color: #3eebd6;
         font-size: 1.5rem;
         font-weight: 600;
         cursor: copy; }
@@ -569,9 +570,9 @@ img {
         .hero_second .circleStatic .circleWrapper .usablity_circle .success-stroke {
           stroke: #ffff66; }
         .hero_second .circleStatic .circleWrapper .creativity_circle .success-stroke {
-          stroke: #70d1c6; }
+          stroke: #3eebd6; }
         .hero_second .circleStatic .circleWrapper .content_circle .success-stroke {
-          stroke: #35a698; }
+          stroke: #12b19e; }
       .hero_second .circleStatic .circle_heading {
         font-weight: 300;
         font-size: 12px;
@@ -612,7 +613,11 @@ img {
 .main {
   position: relative;
   top: 5.1rem;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 1px solid #E6EAEA; }
+  .main__navWrapper {
+    border-bottom: 1px solid #E6EAEA;
+    width: 100%; }
   .main__nav {
     text-align: center;
     padding: 50px 0;

@@ -1,6 +1,5 @@
 .header{
-    border-top: 1px solid $headerBorderColor;
-    border-bottom: 1px solid $headerBorderColor;
+    border-bottom: 1px solid #E6EAEA;
     height: $headerHeight;
     display: flex;
     flex-direction: row;
@@ -19,7 +18,8 @@
     &_menu{
         padding-top: 20px;
         flex-grow: 1;
-        border-right: 1px solid $fColor;
+        max-width: 120px;
+        border-right: 1px solid #E6EAEA;
         cursor: pointer;
         text-transform: uppercase;
         &:hover .row::after{
@@ -33,12 +33,14 @@
         h2{
             transition: all 0.4s linear;
         }     
-        &:hover h2{
+        .animateHead{
             letter-spacing: 5px;
             opacity: 0;
         }
     }
     &_btns{
+        max-width: 326px;
+        min-width: 326px;
         text-transform: uppercase;  
         flex-grow: 2;  
         display: flex;  
@@ -60,10 +62,10 @@
         transition: 0.3s linear all;        
     }
     .row:nth-of-type(2)::after{
-        transition: 0.3s 0.1s linear all;        
+        transition: 0.3s 0.15s linear all;        
     }
     .row:nth-of-type(3)::after{
-        transition: 0.3s 0.2s linear all;        
+        transition: 0.3s 0.25s linear all;        
     }
 }
 .row{
@@ -77,12 +79,11 @@
     content: "";
     width: 20px;
     height: 3px;
-    background: $fColor;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateX(100%);
-    background-color: $fColor;
+    background-color: $fColor2;
 }
 .rowWrapper{
     display: inline-block;
