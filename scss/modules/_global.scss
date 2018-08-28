@@ -1,13 +1,15 @@
 body{
-    width: 100%;
     margin: auto;
     font-family: $dFont;
     font-size: 14px;
     font-weight: 300;
     color: $dFcolor;
     background: $dBgcolor;
-    overflow-x: hidden;
+    overflow: auto;
     box-sizing: border-box;
+    width: 100%;
+    max-width: 1366px;
+    min-width: 1000px;
 }
 //anchor tag
 a{
@@ -18,4 +20,7 @@ a{
 img{
     width: 100%;
     height: 100%;
+}s
+.rightSide, .leftSide{
+    
 }

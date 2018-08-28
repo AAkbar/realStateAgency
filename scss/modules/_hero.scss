@@ -160,6 +160,7 @@
         height: 20px;
         padding: 30px 20px;
         .btn{
+            
             display: inline;
             height: 40px;
             margin-left: 10px;
@@ -177,6 +178,7 @@
             align-items: center;
             justify-content: flex-end;
         }
+        @include clearfix;
     }
     
 }

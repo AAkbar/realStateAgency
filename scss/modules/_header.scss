@@ -9,6 +9,8 @@
     position: fixed;
     background-color: $dBgcolor;
     width: 100%;
+    min-width: 1000px;
+    max-width: 1366px;
     top: 0;
     z-index: 999;
     > div{
@@ -37,11 +39,12 @@
         }
     }
     &_btns{
-        text-transform: uppercase;        
+        text-transform: uppercase;  
         flex-grow: 2;  
         display: flex;  
         align-content: stretch;
         a{
+            line-height: $headerHeight;
             flex: 1;
             text-align: center; 
         }
