@@ -43,7 +43,7 @@
             </div>
         </header>
 
-        <div class="down">
+        <section class="down">
             <div class="hero">
                 <div class="hero_first">
                     <div class="date">
@@ -119,7 +119,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <main class="main">
             <div class="main__navWrapper">
@@ -178,23 +178,58 @@
                     </ul>
                 </nav>
             </div>
-            <section class="main__image-container">
-                <ul class="main__scroll-nav"></ul>
-                div.Images
+            <section class="main__media-container media-container">
+                <nav class="media-container__scroll-nav scroll-nav">
+                    <ul class="scroll-nav__lists">
+                        <li class="scroll-nav__scroll-list">Screenshots</li>
+                        <li class="scroll-nav__scroll-list">Footer</li>
+                    </ul>
+                </nav>
+                <div class="media-container__imgs imgs">
+                    <div class="imgs__img">
+                        <img src="Imgs/main1.jpg">
+                    </div>
+                    <div class="imgs__img">
+                        <img src="Imgs/main2.jpg">
+                    </div>
+                </div>
+                <div class="media-container__vids vids">
+                    <div class="vids__vid">
+                        <video src="Imgs/firstV.MP4"></video>
+                    </div>
+                    <div class="vids__vid">
+                        <video src="Imgs/secondV.mp4"></video>
+                    </div>
+                </div>
             </section>
         </main>
 
     </div>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__head head">
+            <h2 class="head__heading">The awards for design, creativity and innovation on the Internet</h2>
+            <h2 class="head__heading heading_right">Next Conferences</h2>
+        </div>
+        <ul class="footer__menu menu">
+            <li class="menu__list">Directory</li>
+            <li class="menu__list">Jobs</li>
+            <li class="menu__list">Contact Us</li>
+            <li class="menu__list">Cookies Policy</li>
+            <li class="menu__list">Legal Terms</li>
+            <li class="menu__list">Privacy Policy</li>
+        </ul>
+        <h4 class="footer__foot">Private Cloud By
+            <span class="author">Ali Akbar</span>
+        </h4>
     </footer>
 
 
     <script src="js/progresscircle.js"></script>
     <script>
+        //svg with animation in hero section
         $(".circle").circlechart().delay(50).circlechartNumberAnimation();
 
-        //header
+        //header animation on scroll
         var lastScrollPoint = 0;
         $(window).scroll(function (e) {
             v = $(window).scrollTop();
