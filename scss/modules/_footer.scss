@@ -1,0 +1,38 @@
+.footer{
+    margin-top: 5.1rem;
+    padding: 50px 70px;
+    background-color: darken($dBgcolor, 5%);
+    &__head{
+        display: flex;
+        justify-content: space-between;
+    }
+    .head{
+        &__heading{
+            font-weight: 400;
+            color: $fColor;
+        }
+    }
+    .menu{   
+        padding: 0;
+        margin-left: -10px;          
+        &__list{
+            display: inline-block;
+            a{  
+                font-weight: 700;
+                padding: 10px 10px;
+                width: 100%;
+                height: 100%;
+                transition: 0.4s all linear;
+            }
+            a:hover{
+                color: $fColor;
+            }
+        }
+    }
+    &__foot{
+        font-weight: 400;
+        .author{
+            font-weight: 700;
+        }
+    }
+}

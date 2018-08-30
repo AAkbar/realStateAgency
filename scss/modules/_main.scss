@@ -53,4 +53,49 @@
         margin: 0 0 20px 0;
     }
     //main__media-container
+    .media-container{
+        .scroll-nav{
+            &__lists{
+                text-align: center;
+                .current{
+                    border-bottom: 3px solid black;
+                }
+            }
+            &__list{
+                display: inline-block;
+                width: 200px;  
+                height: 50px; 
+                line-height: 50px;
+                a{
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    transition: 0.2s linear all;
+                    &:hover{
+                        color: $fColor;
+                    }
+                }              
+            }
+        }
+        &__imgs{
+            padding: 0 70px;
+        }
+        .imgs{
+            &__img{
+                margin-bottom: 50px;
+            }
+        }
+        &__vids{
+            padding: 0 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .vids{
+            &__vid{
+                width: 49%;
+            }
+        }
+    }
 }

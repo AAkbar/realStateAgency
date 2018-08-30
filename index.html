@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1366px">
+    <meta name="viewport" content="width=1300">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/progresscircle.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script> -->
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -181,8 +182,12 @@
             <section class="main__media-container media-container">
                 <nav class="media-container__scroll-nav scroll-nav">
                     <ul class="scroll-nav__lists">
-                        <li class="scroll-nav__scroll-list">Screenshots</li>
-                        <li class="scroll-nav__scroll-list">Footer</li>
+                        <li class="scroll-nav__list">
+                            <a class="scroll-nav__btn current" href="#">Screenshots</a>
+                        </li>
+                        <li class="scroll-nav__list">
+                            <a class="scroll-nav__btn" href="#">Footer</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="media-container__imgs imgs">
@@ -211,12 +216,24 @@
             <h2 class="head__heading heading_right">Next Conferences</h2>
         </div>
         <ul class="footer__menu menu">
-            <li class="menu__list">Directory</li>
-            <li class="menu__list">Jobs</li>
-            <li class="menu__list">Contact Us</li>
-            <li class="menu__list">Cookies Policy</li>
-            <li class="menu__list">Legal Terms</li>
-            <li class="menu__list">Privacy Policy</li>
+            <li class="menu__list">
+                <a href="">Directory</a>
+            </li>
+            <li class="menu__list">
+                <a href="">Jobs</a>
+            </li>
+            <li class="menu__list">
+                <a href="">Contact Us</a>
+            </li>
+            <li class="menu__list">
+                <a href="">Cookies Policy</a>
+            </li>
+            <li class="menu__list">
+                <a href="">Legal Terms</a>
+            </li>
+            <li class="menu__list">
+                <a href="">Privacy Policy</a>
+            </li>
         </ul>
         <h4 class="footer__foot">Private Cloud By
             <span class="author">Ali Akbar</span>
@@ -240,7 +257,25 @@
                 $(".header_title h2").removeClass("animateHead");
             }
             lastScrollPoint = v;
-        })
+        });
+
+        // video
+        $("video").mouseover(function () {
+            this.play();
+        });
+
+        //scroll
+        $(".scroll-nav__list").on("click", "a", function (e) {
+            e.preventDefault();
+            if ($(e.target).text() === "Footer") {
+                window.scroll({
+                    top: $(".footer")[0].offsetTop,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }
+            return false;
+        });
     </script>
 </body>
 
