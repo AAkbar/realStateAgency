@@ -327,6 +327,20 @@
             }
             return false;
         });
+
+        //menu
+        $(".header_menu").on("click", function () {
+            if (!$(".leftSide").hasClass("showL")) {
+                $(".leftSide").removeClass("hideL").addClass("showL");
+                $(".rightSide").removeClass("hideR").addClass("showR");
+            }
+        });
+        $(".leftSide").on("click", function () {
+            if ($(this).hasClass("showL")) {
+                $(".leftSide").removeClass("showL");
+                $(".rightSide").removeClass("showR");
+            }
+        });
     </script>
 </body>
 
