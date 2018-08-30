@@ -717,15 +717,15 @@ img, video {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none; }
+  z-index: 999; }
   .leftSide .main-nav {
     width: 300px;
     max-width: 300px;
     height: 500px;
     max-height: 500px;
     background-color: #f4f7f6;
-    overflow: auto; }
+    overflow: auto;
+    overflow-x: hidden; }
     .leftSide .main-nav__header {
       display: flex;
       justify-content: space-between;
@@ -742,7 +742,25 @@ img, video {
       .leftSide .main-nav__header .txt:hover {
         color: black; }
   .leftSide .menu {
-    display: none; }
+    display: none;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 300; }
+    .leftSide .menu__list {
+      list-style: none;
+      text-align: left;
+      border-bottom: 1px solid #E6EAEA;
+      color: black; }
+      .leftSide .menu__list a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 15px 30px;
+        transition: 0.2s all ease; }
+        .leftSide .menu__list a:hover {
+          color: #656c7a; }
+      .leftSide .menu__list .current {
+        color: #17dfc7; }
   .leftSide .active {
     display: block; }
 
