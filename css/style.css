@@ -679,7 +679,7 @@ body {
   .main .media-container .imgs__img {
     margin-bottom: 50px; }
   .main .media-container__vids {
-    padding: 0 70px;
+    padding: 0 70px 50px;
     display: flex;
     justify-content: space-between; }
   .main .media-container .vids__vid {
