@@ -1,14 +1,12 @@
 .leftSide{
-    width: 150vw;
-    height: 150vh;
+    width: 300px;
+    height: 900px;
     position: fixed;
     top: 0;
     left: -300px;
     background-color: rgba(black, 0.5);
     z-index: 999;
     transition: 2s all ease;
-    opacity: 0;
-    display: none;
     .main-nav{
         width: 300px;
         max-width: 300px;
@@ -69,33 +67,13 @@
         display: block;
     }
 }
-.leftSide, .rightSide{
+
+//global to the this left and write side
+.leftSide, .rightSide, .footer{
     transition: 2s all ease;
 }
-.rightSide{
-    transform: translateX(0);
+.show{
+    transform: translateX(300px);
 }
-.showL{
-    opacity: 1;
-    display: block;
-    animation: 2s showL both ease;
-}
-@keyframes showL{
-    0%{
-        left: -300px;
-    }
-    100%{
-        left: 0;
-    }
-}
-.showR{
-    animation: 2s showR both ease;
-}
-@keyframes showR{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(300px);        
-    }
-}
+
+

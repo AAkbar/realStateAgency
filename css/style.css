@@ -714,16 +714,14 @@ body {
       font-weight: 700; }
 
 .leftSide {
-  width: 150vw;
-  height: 150vh;
+  width: 300px;
+  height: 900px;
   position: fixed;
   top: 0;
   left: -300px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  transition: 2s all ease;
-  opacity: 0;
-  display: none; }
+  transition: 2s all ease; }
   .leftSide .main-nav {
     width: 300px;
     max-width: 300px;
@@ -770,31 +768,11 @@ body {
   .leftSide .active {
     display: block; }
 
-.leftSide, .rightSide {
+.leftSide, .rightSide, .footer {
   transition: 2s all ease; }
 
-.rightSide {
-  transform: translateX(0); }
-
-.showL {
-  opacity: 1;
-  display: block;
-  animation: 2s showL both ease; }
-
-@keyframes showL {
-  0% {
-    left: -300px; }
-  100% {
-    left: 0; } }
-
-.showR {
-  animation: 2s showR both ease; }
-
-@keyframes showR {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(300px); } }
+.show {
+  transform: translateX(300px); }
 
 .btn {
   display: inline-block;

@@ -17,8 +17,8 @@
     <div class="leftSide">
         <nav class="main-nav">
             <div class="main-nav__header">
-                <div class="main-nav__left txt">English</div>
-                <div class="main-nav__right txt">Close X</div>
+                <div class="main-nav__left txt" id="chngBtn">English</div>
+                <div class="main-nav__right txt" id="cls">Close X</div>
             </div>
             <ul class="menu active" data-head="English">
                 <li class="menu__list">
@@ -329,17 +329,22 @@
         });
 
         //menu
+        $(".leftSide").hide();
         $(".header_menu").on("click", function () {
-            if (!$(".leftSide").hasClass("showL")) {
-                $(".leftSide").removeClass("hideL").addClass("showL");
-                $(".rightSide").removeClass("hideR").addClass("showR");
+            if (!$(".leftSide").hasClass("show")) {
+                window.scroll(0, 0);
+                $(".leftSide").show().addClass("show");
+                $(".rightSide, .footer").addClass("show");
             }
         });
-        $(".leftSide").on("click", function () {
-            if ($(this).hasClass("showL")) {
-                $(".leftSide").removeClass("showL");
-                $(".rightSide").removeClass("showR");
+        $("#cls").on("click", function () {
+            if ($(".leftSide").hasClass("show")) {
+                $(".leftSide").removeClass("show").hide(2000);
+                $(".rightSide, .footer").removeClass("show");
             }
+        });
+        $("#chngBtn").on("click", function () {
+            $(".menu").toggleClass("active");
         });
     </script>
 </body>
