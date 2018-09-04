@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/progresscircle.css">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script> -->
     <script src="js/jquery.js"></script>
@@ -339,7 +339,7 @@
         });
         $("#cls").on("click", function () {
             if ($(".leftSide").hasClass("show")) {
-                $(".leftSide").removeClass("show").hide(2000);
+                $(".leftSide").removeClass("show");
                 $(".rightSide, .footer").removeClass("show");
             }
         });

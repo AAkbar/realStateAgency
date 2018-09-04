@@ -6,7 +6,6 @@
     left: -300px;
     background-color: rgba(black, 0.5);
     z-index: 999;
-    transition: 2s all ease;
     .main-nav{
         width: 300px;
         max-width: 300px;
@@ -69,8 +68,8 @@
 }
 
 //global to the this left and write side
-.leftSide, .rightSide, .footer{
-    transition: 2s all ease;
+.leftSide, .rightSide, .footer {
+    transition: 0.9s all ease;
 }
 .show{
     transform: translateX(300px);

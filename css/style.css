@@ -720,8 +720,7 @@ body {
   top: 0;
   left: -300px;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  transition: 2s all ease; }
+  z-index: 999; }
   .leftSide .main-nav {
     width: 300px;
     max-width: 300px;
@@ -769,7 +768,7 @@ body {
     display: block; }
 
 .leftSide, .rightSide, .footer {
-  transition: 2s all ease; }
+  transition: 0.9s all ease; }
 
 .show {
   transform: translateX(300px); }
